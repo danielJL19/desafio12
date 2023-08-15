@@ -1,2 +1,27 @@
 <h1>Movies#new</h1>
-<p>Find me in app/views/movies/new.html.erb</p>
+<%= form_with model: @movie do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+    <% @movie.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :synopsis, "Sinopsis" %>
+    <%= form.text_area :synopsis %>
+    <% @movie.errors.full_messages_for(:synopsis).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :director %>
+    <%= form.text_field :director  %>
+    <% @movie.errors.full_messages_for(:director).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.submit 'hola' %>
+  </div>
+<% end %>
