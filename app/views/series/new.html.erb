@@ -1,2 +1,18 @@
-<h1>Series#new</h1>
-<p>Find me in app/views/series/new.html.erb</p>
+<h2>Formulario</h2>
+<%= form_with model: @serie do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :synopsis, "Sinopsis" %>
+    <%= form.text_area :synopsis %>
+  </div>
+  <div>
+    <%= form.label :director %>
+    <%= form.text_field :director %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

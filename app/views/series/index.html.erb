@@ -1,2 +1,10 @@
 <h1>Series#index</h1>
-<p>Find me in app/views/series/index.html.erb</p>
+<%= link_to "Crear serie", new_series_path %>
+<%= link_to "Ver peliculas", movies_path %>
+<% @series.each do |serie| %>
+  <div>
+    <h4> <%= serie.name %> </h4>
+    <h3> <%= serie.synopsis %> </h3>
+    <p>  <%= serie.director %> </p>
+  </div>
+<% end %>
