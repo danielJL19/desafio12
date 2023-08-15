@@ -1,6 +1,7 @@
 <h1>Series#index</h1>
 <%= link_to "Crear serie", new_series_path %>
 <%= link_to "Ver peliculas", movies_path %>
+<%= link_to "Ver documentales", documentary_films_path %>
 <% @series.each do |serie| %>
   <div>
     <h4> <%= serie.name %> </h4>

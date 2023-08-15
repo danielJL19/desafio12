@@ -1,2 +1,9 @@
 <h1>DocumentaryFilms#index</h1>
-<p>Find me in app/views/documentary_films/index.html.erb</p>
+<%= link_to "Crear documental", documentary_films_new_path  %>
+<% @documentaryFilms.each do |documentaryFilm| %>
+  <div>
+    <h4> <%= documentaryFilm.name %> </h4>
+    <h3> <%= documentaryFilm.synopsis %> </h3>
+    <p>  <%= documentaryFilm.director %></p>
+  </div>
+<% end %>

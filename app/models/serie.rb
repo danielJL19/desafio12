@@ -10,4 +10,7 @@
 #  updated_at :datetime         not null
 #
 class Serie < ApplicationRecord
+    validates :name, presence: true, uniqueness: true
+    validates :synopsis, presence: true
+    validates :director ,presence: true
 end

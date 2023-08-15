@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'documentary_films/index'
-  get 'documentary_films/create'
-  get 'documentary_films/new'
+  get 'documentary_films',to: 'documentary_films#index'
+  post 'documentary_films',to: 'documentary_films#create'
+  get 'documentary_films/new',to: 'documentary_films#new'
 
   resources :movies
   get 'series',to: 'series#index'
